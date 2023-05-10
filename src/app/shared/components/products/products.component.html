@@ -1,0 +1,36 @@
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <ul class="list-group">
+            <li class="list-group-item" 
+            [routerLink]="['/products', prod.pid]"
+            *ngFor="let prod of productsInfo"
+            [ngClass]="{active : prod.pid === selectedProductsid}">
+                {{prod.pname}}
+            </li>
+        </ul>
+
+    </div>
+    <div class="col-md-8">
+        <!-- <app-product></app-product> -->
+
+        <!-- <button class="btn btn-primary mt-4" (click)="onProductClick()">Go To User</button>  -->
+        <!-- programatical Routing -->
+
+        <!-- <a routerLink="/user" class="btn btn-primary mt-4 ml-4">Go to users using template</a> -->
+    </div>
+</div>
+
+<!-- Routing Path
+
+    current Url >> http://localhost:4200/products
+    baseUrl >> http://localhost:4200
+
+    Absolute Path >> When we use slash '/'  >> baseUrl/user
+
+    Relative Path >> When we dont use slash '/' >> currentUrl/user >> http://localhost:4200/products/user
+
+
+-->
